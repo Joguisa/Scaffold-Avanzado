@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { PokemonItem } from 'src/app/core/interfaces/pokemon-list.interface';
 
 @Component({
   selector: 'app-pokemon-card-smart',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PokemonCardSmartComponent {
   @Input()
-  pokemon: any;
+  pokemon: PokemonItem | null = null;
 
   @Input()
   index: number = 1;
